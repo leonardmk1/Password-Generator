@@ -2,52 +2,28 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*_+./";
-var length = "length";
 
-var includeLowercase = document.querySelector("includeLowercase");
-var includeUppercase = document.querySelector("includeUppercase");
-var includeNumbers = document.querySelector("IncludeNumbers");
-var includeSpecialCharacters = document.querySelector(
-  "includeSpecialCharacters"
-);
-var length = document.querySelector("legth");
-var confrimEl = document.querySelector("confirm");
-var resultEl = document.querySelector("result");
-var passwordDisplay = document.querySelector("passwordDisplay");
+function generatePassword() {
+  var lengthDropdown = document.getElementById("length") ;
+  var length = parseInt(lengthDropdown.options[lengthDropdown.selectedIndex].text);
 
-// confirmEl.addEventListener("click", function(event) {
-//   event.preventDefault();
-//   var length = length.value;
-//   var includeLowercase = includeLowercase.checked;
-//   var includeUppercase = includeUppercase.checked;
-//   var includeNumbers = includeNumbers.checked;
-//   var includeSpecialCharacters = includeSpecialCharacters.checked;
-//   var password = passwordGenerator(
-//     length,
-//     includeLowercase,
-//     includeUppercase,
-//     includeNumbers,
-//     includeSpecialCharacters
-//   );
-//   var passwordDisplay = password;
-// });
+  var allCharacters = "";
+  if (document.getElementById("lower").checked === true){
+    allCharacters = allCharacters + lowercase;
+  }
+  if (document.getElementById("upper").checked === true){
+    allCharacters = allCharacters + uppercase;
+  }
+  if (document.getElementById("num").checked === true){
+    allCharacters = allCharacters + numbers;
+  }
+  if (document.getElementById("special").checked === true){
+    allCharacters = allCharacters + specialCharacters;
+  }
+  
+console.log(allCharacters);
 
-//   for (var i = 0; i < length; i++) {
-//       var lowercase = Math.floor(Math.random () * lowercase.length);
-//       password += all.substring(character, character +1);
-//   }
-//   return password;
 
-function getRandomLower() {
-  return String;
-  lowercase[Math.floor(Math.random() * lowercase.length)];
+
+
 }
-console.log(getRandomLower());
-// // function passwordGenerator(length, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters) {
-// //     var passwordDisplay = " ";
-
-// //     for(var i =0; i < length; i++){
-//         passwordDisplay += characters.charAt(Math.floor(Math.random() * characters.length));
-//     }
-//     return passwordDisplay;
-// }
