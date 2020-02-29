@@ -12,22 +12,22 @@ var length = document.getElementById("legth");
 var resultEl = document.getElementById("result")
 var passwordDisplay = document.getElementById("passwordDisplay")
 
-confrim.addEventListener("confirm", e => {
+genetratePassword.addEventListener("confirm", function(event) {
     event.preventDefault()
     var length = length.value
     var includeLowercase = includeLowercase.checked
     var includeUppercase = includeUppercase.checked
     var includeNumbers = includeNumbers.checked
     var includeSpecialCharacters= includeSpecialCharacters.checked
-    var password = genteratePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters)
+    var password = passwordGenerator(length, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters)
     var passwordDisplay = password
 })
 
-function genteratePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters) {
+function passwordGenerator(length, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters) {
     var passwordDisplay = " ";
 
     for(var i =0; i < length; i++){
-        passwordDisplay += characters.charAt(Math.floor(math.random() * characters.length));
+        passwordDisplay += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     return passwordDisplay;
 }
