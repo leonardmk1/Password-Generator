@@ -8,22 +8,23 @@ function generatePassword() {
   var length = parseInt(lengthDropdown.options[lengthDropdown.selectedIndex].text);
 
   var allCharacters = "";
-  if (document.getElementById("lower").checked === true){
+  if (document.getElementById("lower").checked){
     allCharacters = allCharacters + lowercase;
   }
-  if (document.getElementById("upper").checked === true){
+  if (document.getElementById("upper").checked){
     allCharacters = allCharacters + uppercase;
   }
-  if (document.getElementById("num").checked === true){
+  if (document.getElementById("num").checked){
     allCharacters = allCharacters + numbers;
   }
-  if (document.getElementById("special").checked === true){
+  if (document.getElementById("special").checked){
     allCharacters = allCharacters + specialCharacters;
   }
-  
-console.log(allCharacters);
+  var passwordCharacters = "";
+  for(var i = 0; i < length; i++) {
+    passwordCharacters = passwordCharacters + allCharacters[Math.floor(Math.random() * allCharacters.length)];
+  }
+document.getElementById("passwordDisplay").textContent = passwordCharacters;
 
-
-
-
+$('#exampleModal').modal('toggle');
 }

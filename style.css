@@ -1,3 +1,9 @@
 .border{
     border-style: dashed !important;
 }
+#passwordDisplay{
+    word-break: break-all;
+}
+.jumbotron{
+    min-height: 100vh;
+}
