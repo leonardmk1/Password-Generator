@@ -8,7 +8,7 @@ Upon clicking the Generate Password button the user will be prompted to select f
 
 ## About My Experience
 
-I have been coding for a little over a month now and have learned how to style an HTML page with Bootstrap CSS as well as some of my own. This project I utilized Bootstrap to render my page like the example given in our directions. I have been learning Javascript in this time as well. This project was my first project using javascript to create a function that made the page dynamic.
+I have been coding for a little over a month now and have learned how to style an HTML page with Bootstrap CSS as well as some CSS of my own. This project I utilized Bootstrap to render my page like the example given in our directions. I have been learning Javascript in this time as well. This project was my first project using javascript to create a function that made the page dynamic.
 
 ## Project Links
 
