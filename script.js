@@ -26,5 +26,8 @@ function generatePassword() {
   }
 document.getElementById("passwordDisplay").textContent = passwordCharacters;
 
+$('input:checkbox').prop('checked', true);
+$("#length").val("8");
+
 $('#exampleModal').modal('toggle');
 }
